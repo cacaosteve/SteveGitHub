@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AA09364325B232D100C6FD3C /* SteveGitHubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09364225B232D100C6FD3C /* SteveGitHubApp.swift */; };
-		AA09364525B232D100C6FD3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09364425B232D100C6FD3C /* ContentView.swift */; };
 		AA09364725B232D200C6FD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA09364625B232D200C6FD3C /* Assets.xcassets */; };
 		AA09364A25B232D200C6FD3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA09364925B232D200C6FD3C /* Preview Assets.xcassets */; };
 		AA09365525B232D200C6FD3C /* SteveGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09365425B232D200C6FD3C /* SteveGitHubTests.swift */; };
 		AA09366025B232D200C6FD3C /* SteveGitHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09365F25B232D200C6FD3C /* SteveGitHubUITests.swift */; };
 		AA71E4C125B2559A0030E03F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AA71E4C025B2559A0030E03F /* SwiftUIX */; };
-		AA71E4C725B257780030E03F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AA71E4C625B257780030E03F /* Kingfisher */; };
+		AAD4841225B6001E006F1D36 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483F925B6001D006F1D36 /* APIError.swift */; };
+		AAD4841325B6001E006F1D36 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483FA25B6001D006F1D36 /* APIService.swift */; };
+		AAD4841425B6001E006F1D36 /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483FB25B6001D006F1D36 /* APISession.swift */; };
+		AAD4841525B6001E006F1D36 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483FC25B6001D006F1D36 /* RequestBuilder.swift */; };
+		AAD4841825B6001E006F1D36 /* GitHubEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4840125B6001D006F1D36 /* GitHubEndpoint.swift */; };
+		AAD4841925B6001E006F1D36 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4840225B6001D006F1D36 /* Response.swift */; };
+		AAD4841A25B6001E006F1D36 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4840325B6001D006F1D36 /* GitHubService.swift */; };
+		AAD4841E25B6001E006F1D36 /* GitHubListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4840825B6001D006F1D36 /* GitHubListView.swift */; };
+		AAD4841F25B6001E006F1D36 /* GitHubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4840925B6001D006F1D36 /* GitHubViewModel.swift */; };
+		AAD4844825B69C72006F1D36 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD4844725B69C72006F1D36 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,6 @@
 /* Begin PBXFileReference section */
 		AA09363F25B232D100C6FD3C /* SteveGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteveGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA09364225B232D100C6FD3C /* SteveGitHubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteveGitHubApp.swift; sourceTree = "<group>"; };
-		AA09364425B232D100C6FD3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AA09364625B232D200C6FD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA09364925B232D200C6FD3C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA09364B25B232D200C6FD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +54,16 @@
 		AA09365B25B232D200C6FD3C /* SteveGitHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteveGitHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA09365F25B232D200C6FD3C /* SteveGitHubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteveGitHubUITests.swift; sourceTree = "<group>"; };
 		AA09366125B232D200C6FD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD483F925B6001D006F1D36 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AAD483FA25B6001D006F1D36 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AAD483FB25B6001D006F1D36 /* APISession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		AAD483FC25B6001D006F1D36 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		AAD4840125B6001D006F1D36 /* GitHubEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubEndpoint.swift; sourceTree = "<group>"; };
+		AAD4840225B6001D006F1D36 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		AAD4840325B6001D006F1D36 /* GitHubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		AAD4840825B6001D006F1D36 /* GitHubListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubListView.swift; sourceTree = "<group>"; };
+		AAD4840925B6001D006F1D36 /* GitHubViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubViewModel.swift; sourceTree = "<group>"; };
+		AAD4844725B69C72006F1D36 /* Color+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +71,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA71E4C725B257780030E03F /* Kingfisher in Frameworks */,
 				AA71E4C125B2559A0030E03F /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +95,10 @@
 		AA09363625B232D100C6FD3C = {
 			isa = PBXGroup;
 			children = (
+				AAD4844625B69C72006F1D36 /* Color */,
+				AAD483F825B6001D006F1D36 /* API */,
+				AAD4840025B6001D006F1D36 /* MovieAPI */,
+				AAD4840625B6001D006F1D36 /* Movies */,
 				AA09364125B232D100C6FD3C /* SteveGitHub */,
 				AA09365325B232D200C6FD3C /* SteveGitHubTests */,
 				AA09365E25B232D200C6FD3C /* SteveGitHubUITests */,
@@ -100,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				AA09364225B232D100C6FD3C /* SteveGitHubApp.swift */,
-				AA09364425B232D100C6FD3C /* ContentView.swift */,
 				AA09364625B232D200C6FD3C /* Assets.xcassets */,
 				AA09364B25B232D200C6FD3C /* Info.plist */,
 				AA09364825B232D200C6FD3C /* Preview Content */,
@@ -134,6 +153,44 @@
 			path = SteveGitHubUITests;
 			sourceTree = "<group>";
 		};
+		AAD483F825B6001D006F1D36 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AAD483F925B6001D006F1D36 /* APIError.swift */,
+				AAD483FA25B6001D006F1D36 /* APIService.swift */,
+				AAD483FB25B6001D006F1D36 /* APISession.swift */,
+				AAD483FC25B6001D006F1D36 /* RequestBuilder.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AAD4840025B6001D006F1D36 /* MovieAPI */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4840125B6001D006F1D36 /* GitHubEndpoint.swift */,
+				AAD4840225B6001D006F1D36 /* Response.swift */,
+				AAD4840325B6001D006F1D36 /* GitHubService.swift */,
+			);
+			path = MovieAPI;
+			sourceTree = "<group>";
+		};
+		AAD4840625B6001D006F1D36 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4840825B6001D006F1D36 /* GitHubListView.swift */,
+				AAD4840925B6001D006F1D36 /* GitHubViewModel.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		AAD4844625B69C72006F1D36 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				AAD4844725B69C72006F1D36 /* Color+Ext.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,7 +209,6 @@
 			name = SteveGitHub;
 			packageProductDependencies = (
 				AA71E4C025B2559A0030E03F /* SwiftUIX */,
-				AA71E4C625B257780030E03F /* Kingfisher */,
 			);
 			productName = SteveGitHub;
 			productReference = AA09363F25B232D100C6FD3C /* SteveGitHub.app */;
@@ -227,7 +283,6 @@
 			mainGroup = AA09363625B232D100C6FD3C;
 			packageReferences = (
 				AA71E4BF25B2559A0030E03F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
-				AA71E4C525B257780030E03F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = AA09364025B232D100C6FD3C /* Products */;
 			projectDirPath = "";
@@ -271,8 +326,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA09364525B232D100C6FD3C /* ContentView.swift in Sources */,
 				AA09364325B232D100C6FD3C /* SteveGitHubApp.swift in Sources */,
+				AAD4841525B6001E006F1D36 /* RequestBuilder.swift in Sources */,
+				AAD4841925B6001E006F1D36 /* Response.swift in Sources */,
+				AAD4841E25B6001E006F1D36 /* GitHubListView.swift in Sources */,
+				AAD4841825B6001E006F1D36 /* GitHubEndpoint.swift in Sources */,
+				AAD4841325B6001E006F1D36 /* APIService.swift in Sources */,
+				AAD4841F25B6001E006F1D36 /* GitHubViewModel.swift in Sources */,
+				AAD4844825B69C72006F1D36 /* Color+Ext.swift in Sources */,
+				AAD4841425B6001E006F1D36 /* APISession.swift in Sources */,
+				AAD4841A25B6001E006F1D36 /* GitHubService.swift in Sources */,
+				AAD4841225B6001E006F1D36 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,14 +666,6 @@
 				minimumVersion = 0.0.5;
 			};
 		};
-		AA71E4C525B257780030E03F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -617,11 +673,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA71E4BF25B2559A0030E03F /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
-		};
-		AA71E4C625B257780030E03F /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA71E4C525B257780030E03F /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
