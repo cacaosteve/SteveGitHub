@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftUIX
 
 struct GitHubListView: View {
     @ObservedObject var viewModel = GitHubViewModel()
@@ -34,6 +35,7 @@ struct CommitRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            ActivityIndicator()
             Text(commit.commit?.author?.name ?? "")
                 .foregroundColor(Color.brandSilver)
             Text(commit.sha ?? "")
