@@ -97,8 +97,8 @@
 			children = (
 				AAD4844625B69C72006F1D36 /* Color */,
 				AAD483F825B6001D006F1D36 /* API */,
-				AAD4840025B6001D006F1D36 /* MovieAPI */,
-				AAD4840625B6001D006F1D36 /* Movies */,
+				AAD4840025B6001D006F1D36 /* GitHubAPI */,
+				AAD4840625B6001D006F1D36 /* GitHub */,
 				AA09364125B232D100C6FD3C /* SteveGitHub */,
 				AA09365325B232D200C6FD3C /* SteveGitHubTests */,
 				AA09365E25B232D200C6FD3C /* SteveGitHubUITests */,
@@ -164,23 +164,23 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		AAD4840025B6001D006F1D36 /* MovieAPI */ = {
+		AAD4840025B6001D006F1D36 /* GitHubAPI */ = {
 			isa = PBXGroup;
 			children = (
 				AAD4840125B6001D006F1D36 /* GitHubEndpoint.swift */,
 				AAD4840225B6001D006F1D36 /* Response.swift */,
 				AAD4840325B6001D006F1D36 /* GitHubService.swift */,
 			);
-			path = MovieAPI;
+			path = GitHubAPI;
 			sourceTree = "<group>";
 		};
-		AAD4840625B6001D006F1D36 /* Movies */ = {
+		AAD4840625B6001D006F1D36 /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
 				AAD4840825B6001D006F1D36 /* GitHubListView.swift */,
 				AAD4840925B6001D006F1D36 /* GitHubViewModel.swift */,
 			);
-			path = Movies;
+			path = GitHub;
 			sourceTree = "<group>";
 		};
 		AAD4844625B69C72006F1D36 /* Color */ = {

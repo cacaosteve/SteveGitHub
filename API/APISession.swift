@@ -20,6 +20,19 @@ struct APISession: APIService {
     func request<T>(with builder: RequestBuilder) -> AnyPublisher<T, APIError> where T: Decodable {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
+            let container = try decoder.singleValueContainer()
+            let dateString = try container.decode(String.self)
+            let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            let date = dateFormatter.date(from: dateString)
+//            let midnightThen = Calendar.current.startOfDay(for: date!)
+//            let millisecondsFromMidnight = date!.timeIntervalSince(midnightThen)
+//            let midnightToday = Calendar.current.startOfDay(for: Date())
+//            let normalizedDate = midnightToday.addingTimeInterval(millisecondsFromMidnight)
+            return date ?? Date()
+        })
         
         return URLSession.shared
             .dataTaskPublisher(for: builder.urlRequest)

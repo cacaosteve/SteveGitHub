@@ -23,7 +23,7 @@ struct GitHubListView: View {
                             .listRowBackground(Color.backgroundLead)
                     }
                 }
-                //.navigationBarTitle("")
+                .navigationBarTitle("Commits")
             }
         }
     }
@@ -33,10 +33,11 @@ struct CommitRowView: View {
     let commit: ResponseElement
     
     var body: some View {
-        VStack() {
+        VStack(alignment: .leading) {
+            Text(commit.commit?.author?.name ?? "")
             Text(commit.sha ?? "")
             Text(commit.commit?.message ?? "")
-            Text(commit.commit?.author?.name ?? "")
+            Text(commit.commit?.author?.dateString ?? "")
         }
         .background(Color.backgroundLead)
     }

@@ -92,7 +92,13 @@ struct Commit: Codable {
 struct CommitAuthor: Codable {
     let name: String?
 //    let name, email: String?
-//    let date: Date?
+    let date: Date?
+    
+    var dateString: String {
+        let formatter1 = DateFormatter()
+        formatter1.dateStyle = .long
+        return formatter1.string(from: date ?? Date())
+    }
 }
 
 // MARK: - Tree
