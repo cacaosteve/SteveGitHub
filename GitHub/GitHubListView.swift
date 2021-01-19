@@ -35,9 +35,13 @@ struct CommitRowView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(commit.commit?.author?.name ?? "")
+                .foregroundColor(Color.brandSilver)
             Text(commit.sha ?? "")
+                .foregroundColor(Color.brandSilver)
             Text(commit.commit?.message ?? "")
+                .foregroundColor(Color.brandSilver)
             Text(commit.commit?.author?.dateString ?? "")
+                .foregroundColor(Color.brandSilver)
         }
         .background(Color.backgroundLead)
     }
