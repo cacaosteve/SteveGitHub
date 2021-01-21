@@ -35,15 +35,24 @@ struct CommitRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            ActivityIndicator()
-            Text(commit.commit?.author?.name ?? "")
-                .foregroundColor(Color.brandSilver)
-            Text(commit.sha ?? "")
-                .foregroundColor(Color.brandSilver)
-            Text(commit.commit?.message ?? "")
-                .foregroundColor(Color.brandSilver)
-            Text(commit.commit?.author?.dateString ?? "")
-                .foregroundColor(Color.brandSilver)
+//            ActivityIndicator()
+            HStack {
+                Text(commit.commit?.author?.name ?? "")
+                    .foregroundColor(Color.brandSilver)
+                Text(commit.commit?.author?.dateString ?? "")
+                    .foregroundColor(Color.brandSilver)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            .padding(.top)
+            .padding(.bottom)
+            HStack {
+                Text(commit.shaFirstEightCharacters)
+                    .foregroundColor(Color.brandSilver)
+                Text(commit.commit?.message ?? "")
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            .padding(.bottom)
         }
         .background(Color.backgroundLead)
     }

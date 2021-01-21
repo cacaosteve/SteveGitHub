@@ -15,6 +15,17 @@ struct ResponseElement: Codable, Identifiable {
 //    let url, htmlURL, commentsURL: String?
 //    let author, committer: ResponseAuthor?
 //    let parents: [Parent]?
+    
+    var shaFirstEightCharacters: String {
+        guard sha != nil else {
+            return ""
+        }
+        
+        let startIndex = sha!.index(sha!.startIndex, offsetBy: 0)
+        let endIndex = sha!.index(startIndex, offsetBy: 8)
+
+        return String(sha![startIndex..<endIndex])
+    }
 
     enum CodingKeys: String, CodingKey {
 //        case nodeID = "node_id"

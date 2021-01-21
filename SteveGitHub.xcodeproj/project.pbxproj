@@ -12,6 +12,7 @@
 		AA09364A25B232D200C6FD3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA09364925B232D200C6FD3C /* Preview Assets.xcassets */; };
 		AA09365525B232D200C6FD3C /* SteveGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09365425B232D200C6FD3C /* SteveGitHubTests.swift */; };
 		AA09366025B232D200C6FD3C /* SteveGitHubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA09365F25B232D200C6FD3C /* SteveGitHubUITests.swift */; };
+		AA51729825B7F95400DABD46 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AA51729725B7F95400DABD46 /* OHHTTPStubsSwift */; };
 		AA71E4C125B2559A0030E03F /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = AA71E4C025B2559A0030E03F /* SwiftUIX */; };
 		AAD4841225B6001E006F1D36 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483F925B6001D006F1D36 /* APIError.swift */; };
 		AAD4841325B6001E006F1D36 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD483FA25B6001D006F1D36 /* APIService.swift */; };
@@ -72,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA71E4C125B2559A0030E03F /* SwiftUIX in Frameworks */,
+				AA51729825B7F95400DABD46 /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +211,7 @@
 			name = SteveGitHub;
 			packageProductDependencies = (
 				AA71E4C025B2559A0030E03F /* SwiftUIX */,
+				AA51729725B7F95400DABD46 /* OHHTTPStubsSwift */,
 			);
 			productName = SteveGitHub;
 			productReference = AA09363F25B232D100C6FD3C /* SteveGitHub.app */;
@@ -283,6 +286,7 @@
 			mainGroup = AA09363625B232D100C6FD3C;
 			packageReferences = (
 				AA71E4BF25B2559A0030E03F /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				AA51729625B7F95400DABD46 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 			);
 			productRefGroup = AA09364025B232D100C6FD3C /* Products */;
 			projectDirPath = "";
@@ -658,6 +662,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA51729625B7F95400DABD46 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
 		AA71E4BF25B2559A0030E03F /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -669,6 +681,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA51729725B7F95400DABD46 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA51729625B7F95400DABD46 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
 		AA71E4C025B2559A0030E03F /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA71E4BF25B2559A0030E03F /* XCRemoteSwiftPackageReference "SwiftUIX" */;

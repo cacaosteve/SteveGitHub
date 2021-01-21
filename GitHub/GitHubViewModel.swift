@@ -16,7 +16,7 @@ class GitHubViewModel: ObservableObject, GitHubService {
     
     init(apiSession: APIService = APISession()) {
         self.apiSession = apiSession
-        getCommits()
+        //getCommits()
     }
     
     func getCommits() {
