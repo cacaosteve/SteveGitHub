@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftUIX
 
 struct GitHubListView: View {
-    @ObservedObject var viewModel = GitHubViewModel()
+    @ObservedObject var gitHubViewModel = GitHubViewModel()
     
     init() {
         UITableView.appearance().backgroundColor = UIColor.backgroundLead
@@ -18,14 +18,24 @@ struct GitHubListView: View {
     var body: some View {
         VStack {
             NavigationView {
-                List {
-                    ForEach(viewModel.commits) { commit in
-                        CommitRowView(commit: commit)
-                            .listRowBackground(Color.backgroundLead)
-                    }
+                if (gitHubViewModel.loading) {
+                    ActivityIndicator()
+                        .animated(true)
+                        .style(.large)
                 }
-                .navigationBarTitle("Commits")
+                else {
+                    List {
+                        ForEach(gitHubViewModel.commits) { commit in
+                            CommitRowView(commit: commit)
+                                .listRowBackground(Color.backgroundLead)
+                        }
+                    }
+                    .navigationBarTitle("Commits")
+                }
             }
+        }
+        .onAppear() {
+            gitHubViewModel.getCommits()
         }
     }
 }
@@ -35,7 +45,6 @@ struct CommitRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-//            ActivityIndicator()
             HStack {
                 Text(commit.commit?.author?.name ?? "")
                     .foregroundColor(Color.brandSilver)
