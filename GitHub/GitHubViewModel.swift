@@ -21,20 +21,19 @@ class GitHubViewModel: ObservableObject, GitHubService {
     }
     
     func getCommits() {
-        loading = true
+        self.loading = true
         let cancellable = self.getCommits()
             .sink(receiveCompletion: { result in
+                self.loading = false
                 switch result {
                 case .failure(let error):
                     print("Handle error: \(error)")
                 case .finished:
                     break
                 }
-                
             }) { (response) in
                 self.commits = response
-                self.loading = false
-        }
+            }
         cancellables.insert(cancellable)
     }
 }
