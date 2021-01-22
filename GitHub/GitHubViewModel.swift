@@ -11,6 +11,7 @@ import SwiftUI
 class GitHubViewModel: ObservableObject, GitHubService {
     var apiSession: APIService
     @Published var commits = Response()
+    @Published var loading = false
     
     var cancellables = Set<AnyCancellable>()
     
@@ -20,6 +21,7 @@ class GitHubViewModel: ObservableObject, GitHubService {
     }
     
     func getCommits() {
+        loading = true
         let cancellable = self.getCommits()
             .sink(receiveCompletion: { result in
                 switch result {
@@ -31,6 +33,7 @@ class GitHubViewModel: ObservableObject, GitHubService {
                 
             }) { (response) in
                 self.commits = response
+                self.loading = false
         }
         cancellables.insert(cancellable)
     }
