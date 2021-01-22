@@ -27,7 +27,7 @@ class SteveGitHubUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        XCTAssertEqual(app.tables.cells.count, 0)
+        XCTAssertEqual(app.tables.cells.count, 16)
     }
     
     func testNavigationBarTitle() throws {

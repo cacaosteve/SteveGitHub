@@ -7,6 +7,8 @@
 
 import XCTest
 import Combine
+import OHHTTPStubs
+import OHHTTPStubsSwift
 @testable import SteveGitHub
 
 class SteveGitHubTests: XCTestCase {
@@ -17,6 +19,18 @@ class SteveGitHubTests: XCTestCase {
     override func setUp() {
         super.setUp()
         gitHubViewModel = GitHubViewModel()
+        
+        do {
+            if let bundlePath = Bundle.main.path(forResource: "github",
+                                                 ofType: "json"),
+               let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                stub(condition: isHost("github.com")) { (URLRequest) -> HTTPStubsResponse in
+                    return HTTPStubsResponse(data: jsonData, statusCode: 200, headers: nil)
+                }
+            }
+        } catch {
+            print(error)
+        }
     }
     
     override func tearDown() {
