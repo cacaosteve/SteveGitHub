@@ -24,43 +24,15 @@ class SteveGitHubTests: XCTestCase {
         super.tearDown()
     }
     
-//    func testCommits() {
-//        let expectation = XCTestExpectation(description: "Check if API connects and publishes in viewModel")
-//        _ = GitHubViewModel().$commits.sink(receiveCompletion: { print ($0)
-//        },
-//        receiveValue: {
-//            print ($0)
-//            expectation.fulfill()
-//        })
-//        wait(for: [expectation], timeout: 10)
-//    }
-    
     func testCommits() {
-        let receivedAllValues = expectation(description: "Received value")
-        
-        gitHubViewModel.getCommits()
-        
-        gitHubViewModel.commits.publisher.sink (receiveValue: { value in
-            receivedAllValues.fulfill()
-        }).store(in: &cancellables)
-        
-        wait(for: [receivedAllValues], timeout: 10)
-        
-//        waitForExpectations(timeout: 10, handler: nil)
-        
-        //wait(for: [receivedAllValues], timeout: 10)
-        
-        //gitHubViewModel.getCommits()
-        
-        
-//        let expectation = XCTestExpectation(description: "Check if API connects and publishes in viewModel")
-//        _ = GitHubViewModel().$commits.sink(receiveCompletion: { print ($0)
-//        },
-//        receiveValue: {
-//            print ($0)
-//            expectation.fulfill()
-//        })
-//        wait(for: [expectation], timeout: 10)
+        let expectation = XCTestExpectation(description: "Check if API connects and publishes in viewModel")
+        _ = GitHubViewModel().$commits.sink(receiveCompletion: { print ($0)
+        },
+        receiveValue: {
+            print ($0)
+            expectation.fulfill()
+        })
+        wait(for: [expectation], timeout: 10)
     }
     
     func testInitGitHubViewModel() throws {
