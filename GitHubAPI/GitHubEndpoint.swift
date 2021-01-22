@@ -19,6 +19,8 @@ extension GitHubEndpoint: RequestBuilder {
             urlComponents.scheme = "https"
             urlComponents.host = "api.github.com"
             urlComponents.path = "/repos/cacaosteve/SteveGitHub/commits"
+            urlComponents.query = "per_page=25"
+            urlComponents.query = "page=1"
             
             guard let url = urlComponents.url
                 else {preconditionFailure("Invalid URL format")}
